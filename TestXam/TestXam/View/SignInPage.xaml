@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestXam.View.SignInPage"
+             Title="{Binding Title}">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center">
+            <Entry Placeholder="{Binding PlaceLogin}"
+               Margin="100,0,100,0"
+               Text="{Binding Login}"/>
+            <Entry Placeholder="{Binding PlacePassword}"
+               Margin="100,0,100,0"
+               Text="{Binding Password}"/>
+            <Button 
+            Text="{Binding LogIn}"
+            Margin="100,0,100,0"
+            Command="{Binding SignInCommand}"/>
+            <Label 
+            HorizontalOptions="Center"
+            TextColor="Blue">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="{Binding SignUp}">
+                            <Span.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding SignUPCommand}" />
+                            </Span.GestureRecognizers>
+                        </Span>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
